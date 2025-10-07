@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#020617" />
+  <title>تسجيل الدخول / إنشاء حساب - مستشار الأمن السيبراني</title>
+  <link rel="stylesheet" href="/static/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app">
+    <header class="header glass">
+      <div class="brand">
+        <div class="logo">🛡️</div>
+        <div class="titles">
+          <h1>مستشار الأمن السيبراني</h1>
+          <p>تسجيل الدخول أو إنشاء حساب</p>
+        </div>
+        <div style="margin-inline-start:auto;">
+          <a href="/" style="text-decoration:none;">
+            <button type="button">العودة للرئيسية</button>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="card glass" id="auth-card">
+        <h2>تسجيل الدخول / إنشاء حساب</h2>
+        <form id="auth-form">
+          <div style="display:grid; gap:8px; grid-template-columns:1fr 1fr;">
+            <input id="email" type="email" placeholder="البريد الإلكتروني" required style="padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.14);background:rgba(2,6,23,0.7);color:#e5e7eb;"/>
+            <input id="password" type="password" placeholder="كلمة المرور (6 أحرف على الأقل)" minlength="6" required style="padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.14);background:rgba(2,6,23,0.7);color:#e5e7eb;"/>
+          </div>
+          <small style="color:#94a3b8;">استخدم بريداً صالحاً (name@example.com) وكلمة مرور 6+ أحرف</small>
+          <div style="display:flex; gap:10px; margin-top:10px;">
+            <button id="signup-btn" type="button">إنشاء حساب</button>
+            <button id="login-btn" type="button">تسجيل الدخول</button>
+            <button id="logout-btn" type="button" style="display:none;">تسجيل الخروج</button>
+          </div>
+        </form>
+        <div id="auth-status" class="status" hidden></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="/static/auth.js?v=2"></script>
+</body>
+</html>

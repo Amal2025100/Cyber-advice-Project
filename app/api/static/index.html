@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#020617" />
+  <title>مستشار الأمن السيبراني</title>
+  <link rel="stylesheet" href="/static/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app">
+    <header class="header glass">
+      <div class="brand">
+        <div class="logo">🛡️</div>
+        <div class="titles">
+          <h1>مستشار الأمن السيبراني</h1>
+          <p>اسأل، وسيقدم لك نصائح فورية مبنية على أفضل الممارسات</p>
+        </div>
+        <div style="margin-inline-start:auto;">
+          <a href="/auth" style="text-decoration:none;">
+            <button id="auth-link" type="button">تسجيل الدخول / إنشاء حساب</button>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      
+
+      <section class="card glass form-card">
+        <h2>اكتب سؤالك الأمني</h2>
+        <form id="ask-form">
+          <textarea id="question" placeholder="مثال: وصلني ايميل يطلب تحديث كلمة المرور، هل هذا تصيد؟" rows="4"></textarea>
+          <button id="ask-btn" type="submit">اسأل الآن</button>
+        </form>
+        <div id="status" class="status" hidden>جاري المعالجة...</div>
+      </section>
+
+      <section id="result" class="card glass result-card" hidden>
+        <div class="pill" id="category-pill">التصنيف</div>
+        <h3>النصيحة</h3>
+        <p id="advice"></p>
+      </section>
+
+      <section id="history" class="card glass" hidden>
+        <div style="display:flex;align-items:center;gap:10px;justify-content:space-between;">
+          <h2 style="margin:0;">السجل</h2>
+          <button id="clear-history-btn" type="button" title="مسح السجل">مسح السجل</button>
+        </div>
+        <div id="history-list" style="display:grid; gap:10px;"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
